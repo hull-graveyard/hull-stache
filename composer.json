@@ -1,0 +1,6 @@
+{
+  "name": "hull/hook_example",
+  "require": {
+    "hull/hull-sdk": "dev-master"
+  }
+}
