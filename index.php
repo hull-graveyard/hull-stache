@@ -16,9 +16,9 @@ function mustachify($appId, $_url, $userId)
 
     $hullClient = new Hull_Client(array(
       "hull" => array(
-        "host"  => $host, 
+        "host"  => getenv('HULL_ORG_URL'), 
         "appId" => $appId,
-        "appSecret" => $appSecret,
+        "appSecret" => getenv('HULL_APP_SECRET'),
         "userId" => $userId
       )
     ));
