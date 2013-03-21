@@ -1,5 +1,5 @@
 {
-    "hash": "4303f2ec588bbb2efa9837d6e4773977",
+    "hash": "b9f1e71fd06781540e9fd35806866b7a",
     "packages": [
         {
             "name": "facebook/php-sdk",
@@ -80,6 +80,49 @@
             "description": "Hull PHP SDK",
             "homepage": "http://github.com/hull/php-sdk",
             "time": "2013-03-17 21:47:25"
+        },
+        {
+            "name": "mandrill/mandrill",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php.git",
+                "reference": "1.0.18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/mailchimp/mandrill-api-php/get/1.0.18.zip",
+                "reference": "1.0.18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mandrill": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mandrill Devs",
+                    "email": "community@mandrill.com",
+                    "homepage": "http://mandrill.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "API client library for the Mandrill email as a service platform",
+            "homepage": "https://bitbucket.org/mailchimp/mandrill-api-php",
+            "keywords": [
+                "api",
+                "email"
+            ],
+            "time": "2013-03-15 17:27:00"
         }
     ],
     "packages-dev": [
@@ -90,7 +133,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "hull/hull-sdk": 20
+        "hull/hull-sdk": 20,
+        "mandrill/mandrill": 20
     },
     "platform": [
 

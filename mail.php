@@ -2,21 +2,7 @@
 require_once 'vendor/autoload.php';
 
 $appId = null;
-
-function mustachify($appId, $picture, $email)
-{
-  error_log($email);
-  $_url = 'http://mustachify.me/?src=' . urlencode(str_replace('type=square', 'type=large', $picture));
-  ini_set('SMTP', 'localhost');
-  $ret = mail(
-    $email, 
-    'You\'ve been Hull-stachified!', "Check it out at $_url\r\r Cheers,\r The Hull team.",
-    'From: stuff@hull.io'
-  );
-  //error_log($ret);
-}
-
-
+$mandrill = new Mandrill(getenv('MANDRILL_API_KEY'));
 
 function findUser($userId)
 {
@@ -46,6 +32,17 @@ function getImageURL($imageId)
 
 function sendImageByMail($imageURL, $userEmail)
 {
+  global $mandrill;
+  $msg = new Mandrill_Messages($mandrill);
+  $desc = array(
+    'html' => "<a href=\"$imageURL\">Check it out</a>",
+    'text' => "Check it out: $imageURL",
+    'subject' => "You've been Hull-stached!",
+    'from_email' => 'mo@hull.io',
+    'from_name' => 'The hull.io moustache squad',
+    'to' => array(array('email' => $userEmail))
+  );
+  $msg->send($desc);
   error_log($imageURL);
   error_log($userEmail);
 }
