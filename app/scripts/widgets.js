@@ -1,21 +1,11 @@
-/*global Hull:true */
-Hull.widget("hullo", {
-  templates: ['hullo']
-});
-
-
-
-
-
-//--------
-
-
 Hull.widget('hullstache', {
   templates: ['loggedIn', 'notLogged'],
   refreshEvents: ['model.hull.me.change'],
   beforeRender: function (data) {
     this.template = this.loggedIn() ? 'loggedIn' : 'notLogged';
-    data.picture = encodeURIComponent(data.me.identities[0].picture.replace('type=square', 'type=large'));
+    if (this.loggedIn()) {
+      data.picture = encodeURIComponent(data.me.identities[0].picture.replace('type=square', 'type=large'));
+    }
   },
   actions: {
     sendByMail: function (elt, evt, data) {
