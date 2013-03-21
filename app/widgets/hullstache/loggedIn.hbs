@@ -1,3 +1,9 @@
 <input type="button" value="mustache me" data-hull-action="mustache"/>
-
-<div data-hull-widget="images"></div>
+<div>
+{{#if picture}}
+<img src="http://mustachify.me?src={{picture}}" id="hull_stache"/><br>
+<a href="#" data-hull-action="sendByMail">Send By Mail</a>
+{{else}}
+No picture in the profile
+{{/if}}
+</div>

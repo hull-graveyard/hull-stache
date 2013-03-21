@@ -1,14 +1,17 @@
 Hull.widget('hullstache', {
   templates: ['loggedIn', 'notLogged'],
   refreshEvents: ['model.hull.me.change'],
-  beforeRender: function () {
+  beforeRender: function (data) {
     this.template = this.loggedIn() ? 'loggedIn' : 'notLogged';
+    data.picture = encodeURIComponent(data.me.identities[0].picture.replace('type=square', 'type=large'));
   },
   actions: {
-    mustache: function () {
-      var me = this.data.me;
-      var picture = me.get('identities')[0].picture;
-      this.api.put('me/profile', {moustache_updated: Date.now()});
+    sendByMail: function (elt, evt, data) {
+      var imgSrc = this.$el.find('#hull_stache').attr('src');
+      evt.preventDefault();
+      this.api.post('me/images', {name: "hull-stache", source_url: imgSrc}).then(function (obj) {
+        alert('Check your inbox!');
+      });
     }
   }
 });
