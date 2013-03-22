@@ -1,3 +1,5 @@
+/*jshint browser: true*/
+/*global Hull:true */
 Hull.widget('hullstache', {
   templates: ['loggedIn', 'notLogged'],
   refreshEvents: ['model.hull.me.change'],
