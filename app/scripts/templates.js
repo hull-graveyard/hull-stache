@@ -4,17 +4,12 @@ this["Hull"]["templates"] = this["Hull"]["templates"] || {};
 this["Hull"]["templates"]["hullstache/loggedIn"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Handlebars.helpers; data = data || {};
-  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+  var buffer = "", stack1, self=this;
 
 function program1(depth0,data) {
   
-  var buffer = "", stack1;
-  buffer += "\n    <div class='mustached'><img src=\"http://mustachify.me?src=";
-  if (stack1 = helpers.picture) { stack1 = stack1.call(depth0, {hash:{},data:data}); }
-  else { stack1 = depth0.picture; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "\" id=\"hull_stache\"/></div>\n    <h1 class='post-title'><a href=\"#\" class='btn' data-hull-action=\"sendByMail\">Send me the mail again</a></h1>\n  ";
-  return buffer;
+  
+  return "\n    <h1 class='post-title'><a href=\"#\" class='btn' data-hull-action=\"sendByMail\">Send me the mail again</a></h1>\n  ";
   }
 
 function program3(depth0,data) {
