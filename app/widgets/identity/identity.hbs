@@ -1,0 +1,21 @@
+{{#if loggedIn}}
+  <div class="hull-media hull-identity">
+     <h1 class='post-title'>{{me.name}}, you've been hullstached.</h1>
+     <div data-hull-widget="hullstache"></div>
+     <div class='center'><p><a data-hull-action="logout" class="">Now logout</a></p></div>
+  </div>
+{{else}}
+  {{#authServices}}
+    <div class="center">
+      <h1 class='post-title'>DUDE, Y U NOO CLICK THIS BUTTON ? </h1>
+      <h1 class="post-title"><a data-hull-action="login" data-hull-provider="{{.}}" class="btn"> hullstache me with {{classify .}} </a> </h1>
+      <p>you gonna get hullstached, and you're gonna receive a mail with it !</p>
+    </div>
+  {{/authServices}}
+
+  {{^authServices}}
+  {{#if debug}}
+    No Auth Services configured, please add at least one in the admin.
+  {{/if}}
+  {{/authServices}}
+{{/if}}
