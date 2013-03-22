@@ -1,8 +1,8 @@
 <div>
-{{#if picture}}
-<img src="http://mustachify.me?src={{picture}}" id="hull_stache"/><br>
-<a href="#" data-hull-action="sendByMail">Send By Mail</a>
-{{else}}
-No picture in the profile
-{{/if}}
+  {{#if picture}}
+    <div class='mustached'><img src="http://mustachify.me?src={{picture}}" id="hull_stache"/></div>
+    <h1 class='post-title'><a href="#" class='btn' data-hull-action="sendByMail">Send me the mail again</a></h1>
+  {{else}}
+    <h3>Sad panda, you have no picture in your profile</h3>
+  {{/if}}
 </div>

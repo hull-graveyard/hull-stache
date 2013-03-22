@@ -1,0 +1,34 @@
+body{
+  background-color: #F1F3F5;
+}
+#header{
+  background-color: #F1F3F5;
+  color: #7C8A9E;
+}
+#header a{
+  color: #7C8A9E;
+}
+#nav{
+  display: block;
+}
+strong{
+  font-weight: bold;
+}
+
+.identity_widget{
+  /*text-align: center;*/
+}
+
+.mustached, .center{
+  text-align: center;
+}
+.mustached{
+  display: none;
+}
+
+.post-title .btn{
+  color: white;
+}
+.hull-identity-disconnected{
+  text-align: center;
+}

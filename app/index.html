@@ -4,14 +4,38 @@
     <meta charset="utf-8">
     <title>Hullo World!</title>
     <!-- build:css application.css -->
+    <link rel="stylesheet" href="http://hull.io/stylesheets/tumblr/screen.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <script type="text/javascript" src="//use.typekit.net/zds7dxs.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <!-- endbuild -->
   </head>
   <body>
 
-    <div data-hull-widget="identity@hull" data-hull-provider="facebook"></div>
+    <header id="header">
+      <div>
+        <div class="clearfix">
+          <ul id="nav">
+            <li><a href="/hull.io">Back to the website</a></li>
+          </ul>
+          <h1 id="logo" class="logo-image">
+            <a href="/">
+              <img src="http://static.tumblr.com/fec3ac0a803872d2690cce350586361f/2pnchvw/37Lmk2eh1/tumblr_static_logo-home.png">
+            </a>
+          </h1>
+        </div>
+      </div>
+    </header>
 
-    <div data-hull-widget="hullstache"></div>
+    <section class="content">
+      <div class='identity_widget' data-hull-widget="identity@hull" data-hull-provider="facebook"></div>
+    </section>
+
+    <footer id="footer">
+    </footer>
+
+
+
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="//hull-js.s3.amazonaws.com/develop/hull.js"></script>
