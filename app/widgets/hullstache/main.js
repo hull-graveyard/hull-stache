@@ -28,9 +28,9 @@ Hull.widget('hullstache', {
   },
   sendImage: function () {
     "use strict";
-    // this.api.post('me/images', {name: "hull-stache", source_url: "http://mustachify.me/?src=" + encodeURIComponent(this.getPicture().replace('type=square', 'type=large'))}).then(function (obj) {
-    //   window.alert('Check your inbox!');
-    // });
+    this.api.post('me/images', {name: "hull-stache", source_url: "http://mustachify.me/?src=" + encodeURIComponent(this.getPicture().replace('type=square', 'type=large'))}).then(function (obj) {
+      window.alert('Check your inbox!');
+    });
   }
 });
 
