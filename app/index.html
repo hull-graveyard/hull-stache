@@ -2,8 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hullo World!</title>
-    <link rel="stylesheet" href="http://hull.io/stylesheets/tumblr/screen.css">
+    <title>Hullstache !</title>
     <!-- build:css application.css -->
     <link rel="stylesheet" href="./styles/main.css">
     <!-- endbuild -->
@@ -11,31 +10,15 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-
-    <header id="header">
-      <div>
-        <div class="clearfix">
-          <ul id="nav">
-            <li><a href="http://hull.io">Back to the website</a></li>
-          </ul>
-          <h1 id="logo" class="logo-image">
-            <a href="/">
-              <img src="http://static.tumblr.com/fec3ac0a803872d2690cce350586361f/2pnchvw/37Lmk2eh1/tumblr_static_logo-home.png">
-            </a>
-          </h1>
-        </div>
+    <div class="main">
+      <div class="content">
+        <header id="header">
+          <h1 class="hull-stache__title">Hullstache !</h1>
+        </header>
+        <div class='identity_widget' data-hull-widget="identity@hull" data-hull-provider="facebook"></div>
       </div>
-    </header>
-
-    <section class="content">
-      <div class='identity_widget' data-hull-widget="identity@hull" data-hull-provider="facebook"></div>
-    </section>
-
-    <footer id="footer">
-    </footer>
-
-
-
+      <div data-hull-widget="share@hull" data-hull-provider="twitter" data-hull-label="Tweet" data-hull-text="Dude, I just got hullstached, Y U no get hullstached too ?" data-hull-url="http://j.mp/WWsknF" class="hull-widget"></div>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="//hull-js.s3.amazonaws.com/develop/hull.js"></script>

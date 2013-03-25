@@ -8,9 +8,9 @@ This project is built on the [Hull](http://hull.io) platform, to emonstrate the 
 # Hullstache
 
 This is demo a entirely built with Hull.
-The purpose is to display your Facebook profile picture with a moustache, then send you a link to this image by email.
+The purpose is to send you a _mustachified_ version of your Facebook profile by email.
 
-[Play Hullstache (http://hull.github.com/hull-stache)](http://hull.github.com/hull-stache)
+[Play with Hullstache (http://hull.github.com/hullstache)](http://hull.github.com/hullstache)
 
 The following features are demoed in this app.
 
@@ -20,9 +20,15 @@ The following features are demoed in this app.
 
 The webhook has been writen in PHP. Although we reconmmend PHP 5.4, any version starting at PHP 5.1 should work.
 
+## Goals of this demo
+
+The purpose of this demo is mainly to demonstrate how Webhooks in Hull work. And we're really big fan of silly useless demos here!
+
 ## How to add a webhook to your app
 
 1. Write your script/app that can respond to POST requests
 2. Login to the [Hull's admin](http://alpha.hullapp.io/)
 3. Select your app in the organization it belongs to
-4. ...
+4. Click on the "Create a hook" button
+5. Enter the URL of your hook
+6. Et voila! Everytime something happens in your app, your hook will get notified. 

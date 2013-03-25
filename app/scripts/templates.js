@@ -9,7 +9,7 @@ helpers = helpers || Handlebars.helpers; data = data || {};
 function program1(depth0,data) {
   
   
-  return "\n    <h1 class='post-title'><a href=\"#\" class='btn' data-hull-action=\"sendByMail\">Send me the mail again</a></h1>\n  ";
+  return "\n    <a href=\"#\" class='hull-btn' data-hull-action=\"sendByMail\">Send me the mail again</a>\n  ";
   }
 
 function program3(depth0,data) {
@@ -42,9 +42,9 @@ helpers = helpers || Handlebars.helpers; data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\n  <div class=\"hull-media hull-identity\">\n     <h1 class='post-title'>"
+  buffer += "\n  <div class=\"hull-media hull-identity\">\n    <h3>"
     + escapeExpression(((stack1 = ((stack1 = depth0.me),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + ", you've been hullstached.</h1>\n     <div data-hull-widget=\"hullstache\"></div>\n     <div class='center'><p><a data-hull-action=\"logout\" class=\"\">Now logout</a></p></div>\n  </div>\n";
+    + ",<br/>you've been hullstached.</h3>\n    <div data-hull-widget=\"hullstache\"></div>\n    <div class=\"hull-stache__description secondary\">\n      <p>\n        <a data-hull-action=\"logout\" class=\"logout\">Now logout</a>\n      </p>\n  </div>\n";
   return buffer;
   }
 
@@ -69,12 +69,13 @@ function program3(depth0,data) {
 function program4(depth0,data) {
   
   var buffer = "", stack1, options;
-  buffer += "\n    <div class=\"center\">\n      <h1 class='post-title'>DUDE, Y U NOO CLICK THIS BUTTON ? </h1>\n      <h1 class=\"post-title\"><a data-hull-action=\"login\" data-hull-provider=\""
+  buffer += "\n    <div class=\"hull-stache__description\">\n      <h3>Dude, y u no click this button ?</h3>\n      "
+    + "\n    </div>\n    <button class=\"hull-btn\" data-hull-action=\"login\" data-hull-provider=\""
     + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
-    + "\" class=\"btn\"> hullstache me with ";
+    + "\" >hullstache me with ";
   options = {hash:{},data:data};
   buffer += escapeExpression(((stack1 = helpers.classify),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "classify", depth0, options)))
-    + " </a> </h1>\n      <p>you gonna get hullstached, and you're gonna receive a mail with it !</p>\n    </div>\n  ";
+    + "</button>\n    <div class=\"hull-stache__description secondary\">\n      <p>This app is open source, it's a demo of hull's webhooks\n        <br/>\n        <a href=\"http://github.com/hull/hullstache\">Check out how it's done.</a>\n      </p>\n    </div>\n  ";
   return buffer;
   }
 
