@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hullstache !</title>
+    <link rel="stylesheet" href="application.css">
+    <script type="text/javascript" src="//use.typekit.net/zds7dxs.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <a href="https://github.com/hull/hullstache"><img style="position: absolute; top: 0; right: 0; border: 0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+    <div class="main">
+      <div class="content">
+        <header id="header">
+          <h1 class="hull-stache__title">Hullstache !</h1>
+        </header>
+        <div class="identity_widget" data-hull-widget="identity@hull" data-hull-provider="facebook"></div>
+      </div>
+      <div data-hull-widget="share@hull" data-hull-provider="twitter" data-hull-label="Tweet" data-hull-text="Dude, I just got hullstached, Y U no get hullstached too ?" data-hull-url="http://j.mp/WWsknF" class="hull-widget"></div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//hull-js.s3.amazonaws.com/develop/hull.js"></script>
+
+    <script src="application.js"></script>
+  </body>
+</html>
