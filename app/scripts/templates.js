@@ -1,9 +1,9 @@
 this["Hull"] = this["Hull"] || {};
 this["Hull"]["templates"] = this["Hull"]["templates"] || {};
 
-this["Hull"]["templates"]["hullstache/loggedIn"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
+this["Hull"]["templates"]["hullstache/loggedIn"] = function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, self=this;
 
 function program1(depth0,data) {
@@ -23,20 +23,20 @@ function program3(depth0,data) {
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>\n";
   return buffer;
-  });
+  };
 
-this["Hull"]["templates"]["hullstache/notLogged"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
+this["Hull"]["templates"]["hullstache/notLogged"] = function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
   return "\n";
-  });
+  };
 
-this["Hull"]["templates"]["identity/identity"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers; data = data || {};
+this["Hull"]["templates"]["identity/identity"] = function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this, blockHelperMissing=helpers.blockHelperMissing;
 
 function program1(depth0,data) {
@@ -74,7 +74,7 @@ function program4(depth0,data) {
     + escapeExpression((typeof depth0 === functionType ? depth0.apply(depth0) : depth0))
     + "\" >hullstache me with ";
   options = {hash:{},data:data};
-  buffer += escapeExpression(((stack1 = helpers.classify),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "classify", depth0, options)))
+  buffer += escapeExpression(((stack1 = helpers.classify || depth0.classify),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "classify", depth0, options)))
     + "</button>\n    <div class=\"hull-stache__description secondary\">\n      <p>This app is open source, it's a demo of hull's webhooks\n        <br/>\n        <a href=\"http://github.com/hull/hullstache\">Check out how it's done.</a>\n      </p>\n    </div>\n  ";
   return buffer;
   }
@@ -98,4 +98,4 @@ function program7(depth0,data) {
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n";
   return buffer;
-  });
+  };
