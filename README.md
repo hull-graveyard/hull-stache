@@ -10,7 +10,7 @@ This project is built on the [Hull](http://hull.io) platform, to emonstrate the 
 This is demo a entirely built with Hull.
 The purpose is to send you a _mustachified_ version of your Facebook profile by email.
 
-[Play with Hullstache (http://hull.github.com/hull-stache)](http://hull.github.com/hull-stache)
+[Play with Hullstache (http://hull.github.io/hull-stache)](http://hull.github.io/hull-stache)
 
 The following features are demoed in this app.
 
