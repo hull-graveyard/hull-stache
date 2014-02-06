@@ -27,7 +27,7 @@ The purpose of this demo is mainly to demonstrate how Webhooks in Hull work. And
 ## How to add a webhook to your app
 
 1. Write your script/app that can respond to POST requests
-2. Login to the [Hull's admin](http://alpha.hullapp.io/)
+2. Login to the [Hull's admin](https://accounts.hullapp.io/)
 3. Select your app in the organization it belongs to
 4. Click on the "Create a hook" button
 5. Enter the URL of your hook
